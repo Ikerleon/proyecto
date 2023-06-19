@@ -1,0 +1,131 @@
+.regresar{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.regresar a{
+    color: #000000;
+}
+table{
+    background-color: #ffffffc8;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+}
+caption{
+    background-color: #ffffffc8;
+    font-size: 20px;
+    padding: 2%;
+    font-weight: bolder;
+}
+th, td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border: 2px solid #747070a5;
+}
+th{
+    text-align: left;
+}
+.chequeo{
+    text-align: center;
+}
+.boton{
+    border: none;
+}
+.boton button{
+    border-radius: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.boton button:hover{
+    background: wheat;
+    transition: 0.5s;
+}
+.agregar{
+    margin-left: 8%;
+    border-radius: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.bajar{
+    margin-left: 2%;
+    border-radius: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.agregar:hover, .bajar:hover{
+    background: wheat;
+    transition: 0.5s;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.botones button {
+    padding: 15px 15px;
+    background-color: rgb(17, 195, 62);
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color:#fff;
+    cursor: pointer;
+}
+#close, #close1, #close2{
+    margin-right: 30px;
+}
+#enviar, #dar_baja, #justificar{
+    margin-left: 30px;
+}
+.modal-contenedor  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(79,79,79, 0.7);
+    z-index: 1;
+    visibility: hidden;
+}
+.titulo{
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+.datos{
+    margin-bottom: 30px;
+}
+.datos label{
+    display: block;
+}
+.datos input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    color: #000000;
+}
+.justificar{
+    padding-bottom: 10%;
+}
+.modal-contenido {
+    width: 450px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,21 @@
+<body>
+<!--contenedor de iniciar sesion-->
+    <div class="Inicar_sesion">
+        <!--formulario para iniciar sesion-->
+        <form action="" id="form">
+            <h1 class="titulo"> Iniciar sesion</h1>
+            <div class="datos correo">
+                <input type="email" id="correo">
+                <label for="correo">Correo institucional</label>
+                <p class="mensajeError"></p>
+            </div>
+            <div class="datos contrasena">
+                <input type="password" id="contrasena">
+                <label for="contrasena">Contraseña</label>
+                <p class="mensajeError"></p>
+            </div>
+            <button class="boton" type="button" (click)="validacionIniciarsesion()">Iniciar Sesión</button>
+            <p>¿Aun no te has registrado? <a routerLink="/registro">Registrarse</a></p>
+        </form>
+    </div>
+</body>

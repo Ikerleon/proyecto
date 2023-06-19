@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: #299d05;
+}
+.logo{
+    display: flex;
+    margin-left: 70px;
+}
+.letras h1,h2{
+    color: #ffffff;
+    margin: 0;
+}
+.logo img{
+    height: 70px;
+}

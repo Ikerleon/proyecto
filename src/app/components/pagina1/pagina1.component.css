@@ -1,0 +1,35 @@
+.bienvenido{
+    text-align: center;
+}
+.informacion{
+    margin: auto;
+    max-width: 70%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.fa-solid{
+    color: #299d05;
+}
+.icono{
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.materias{
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 1px;
+}
+.datos h4, p{
+    margin-top: 0%;
+    margin-bottom: 1px;
+    font-size: 18px;
+}
+.datos{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.nombre{
+    color: #000000;
+}

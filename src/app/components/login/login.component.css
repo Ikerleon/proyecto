@@ -1,0 +1,67 @@
+body{
+    padding-top: 2px;
+    padding-bottom: 220px;
+    background: url(../login/fondo.jpg) no-repeat center;
+    background-size: cover;
+}
+/*estilo de titulo*/
+.titulo{
+    text-align: center;
+    letter-spacing: 3px;
+}
+/*estilo de formulario de iniciar sesion*/
+.Inicar_sesion{
+    font-family: 'Playfair Display', serif;
+    background: #0a090993;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    color: #ffffff;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px 50px;
+    border-radius: 10px;
+}
+.datos{
+    margin-bottom: 30px;
+}
+.datos label{
+    display: block;
+}
+.datos input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #f8f9fa;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+.mensajeError{
+    color: #eca576ea;
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Chivo Mono', monospace;
+  } 
+.datos_terminos{
+    margin-bottom: 20px;
+  }
+.boton{
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    border: none;
+}
+.boton:hover{
+  background: wheat;
+  transition: 0.5s;
+}
+a{
+  color: #42c5e6;
+}
