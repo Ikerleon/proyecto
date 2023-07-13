@@ -1,0 +1,32 @@
+.regresar{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.regresar a{
+    color: #000000;
+}
+table {
+    background-color: #ffffffc8;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+}
+th, td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border: 2px solid #747070a5;
+}
+td:last-child {
+    text-align: center;
+}
+caption{
+    background-color: #ffffffc8;
+    font-size: 20px;
+    padding: 2%;
+    font-weight: bolder;
+}

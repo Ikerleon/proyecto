@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="regresar">
+    <p><a routerLink="/estudiantes">Regresar</a></p>
+</div>
+<table>
+    <caption>Estudiantes que han justificado:</caption>
+    <tr>
+      <th *ngFor="let item of getObjectValues(tablaData[0])">{{ item }}</th>
+    </tr>
+    <tr *ngFor="let data of tablaData.slice(1)">
+      <td *ngFor="let item of getObjectValues(data)">{{ item }}</td>
+    </tr>
+  </table>
+  <table>
+    <caption>Estudiantes con inasistencia:</caption>
+    <tr>
+      <th *ngFor="let item of getObjectValues(tablaData2[0])">{{ item }}</th>
+    </tr>
+    <tr *ngFor="let data of tablaData2.slice(1)">
+      <td *ngFor="let item of getObjectValues(data)">{{ item }}</td>
+    </tr>
+  </table>

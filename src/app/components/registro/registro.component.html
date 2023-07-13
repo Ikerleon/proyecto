@@ -2,36 +2,18 @@
 <!--Contenedor de registro-->
     <div class="Registrarse">
         <!--formulario para registrarse-->
-        <form action="" id="form">
-            <h1 class="titulo"> Registro</h1>
-            <div class="datos nombre">
-                <input type="text" id="nombre">
-                <label for="nombre">Nombre</label>
-                <p class="mensajeError"></p>
-            </div>
-            <div class="datos correo">
-                <input type="email" id="correo">
-                <label for="correo">Correo institucional</label>
-                <p class="mensajeError"></p>
-            </div>
-            <div class="datos contrasena">
-                <input type="password" id="contrasena">
-                <label for="contrasena">Contraseña</label>
-                <p class="mensajeError"></p>
-            </div>
-            <div class="datos repe_contrasena">
-                <input type="password" id="repe_contrasena">
-                <label for="repe_contrasena"> Repetir contraseña</label>
-                <p class="mensajeError"></p>
-            </div>
-            <div class="datos_terminos terminosycondiciones">
-                <input type="checkbox" id="terminosycondiciones">
-                <label for="terminosycondiciones">He leído y acepto los </label>
-                <a href="#">Términos y Condiciones</a>
-                <p class="mensajeError"></p>
-            </div>
-            <button class="boton" type="button" (click)="validacionRegistro()">Registrar</button>
-            <p>¿Ya tienes una cuenta? <a routerLink="/login">Iniciar sesion</a></p>
-        </form>
+        <form (submit)="onSubmit()">
+          <h1 class="titulo"> Registro</h1>
+          <div class="datos">
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+              <label for="email">Email</label>
+           </div>
+           <div class="datos">
+             <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required>
+             <label for="password">Contraseña</label>
+           </div>
+           <button type="submit" class="boton">Registrarse</button>
+         </form>
+         <p>¿Ya tienes una cuenta? <a routerLink="/login">Iniciar sesion</a></p>
     </div>   
 </body>

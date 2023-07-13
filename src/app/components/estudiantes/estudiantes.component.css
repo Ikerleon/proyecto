@@ -35,11 +35,12 @@ th{
 }
 .boton{
     border: none;
+    
 }
 .boton button{
     border-radius: 10px;
-    padding-left:20px;
-    padding-right: 20px;
+    padding-left:10px;
+    padding-right: 10px;
 }
 .boton button:hover{
     background: wheat;
@@ -53,15 +54,7 @@ th{
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.bajar{
-    margin-left: 2%;
-    border-radius: 10px;
-    padding-left:20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.agregar:hover, .bajar:hover{
+.agregar:hover{
     background: wheat;
     transition: 0.5s;
 }
@@ -79,10 +72,10 @@ th{
     color:#fff;
     cursor: pointer;
 }
-#close, #close1, #close2{
+#close{
     margin-right: 30px;
 }
-#enviar, #dar_baja, #justificar{
+#enviar{
     margin-left: 30px;
 }
 .modal-contenedor  {
@@ -115,9 +108,7 @@ th{
     border: 1px solid #000;
     color: #000000;
 }
-.justificar{
-    padding-bottom: 10%;
-}
+
 .modal-contenido {
     width: 450px;
     height: auto;
@@ -128,4 +119,12 @@ th{
 .botones{
     display: flex;
     justify-content: center;
+}
+.estado{
+    margin-left: 2%;
+    border-radius: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

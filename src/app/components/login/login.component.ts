@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -7,47 +8,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private router: Router) {}
 
-  validacionIniciarsesion(): void {
-    // Obtener los valores de los campos de correo y contraseña
-    const correo = (<HTMLInputElement>document.getElementById('correo')).value;
-    const contrasena = (<HTMLInputElement>document.getElementById('contrasena')).value;
+  email: string='';
+  password: string='';
 
-    let comprobar = true;
+  constructor(
+    private userService: UserService,
+    private router: Router
+  ) {}
 
-    // Validar los campos de correo y contraseña
-    if (correo.length < 1 || correo.trim() === '') {
-      this.mensaje_error('correo', 'Correo incorrecto');
-      comprobar = false;
-    }  else if (!correo.includes('@')) {
-      this.mensaje_error('correo', 'El correo debe contener un símbolo "@"');
-      comprobar = false;
-    }else {
-      this.mensaje_error('correo', '');
+  onSubmit() {
+    const loginData = {
+      email: this.email,
+      password: this.password
+    };
+    if (this.email === '' || this.password === '') {
+      alert('Por favor llene todos los campos');
+      return;
     }
 
-    if (contrasena.length < 1 || contrasena.trim() === '') {
-      this.mensaje_error('contrasena', 'Contraseña incorrecta');
-      comprobar = false;
-    } else {
-      this.mensaje_error('contrasena', '');
-    }
-
-    if (comprobar) {
-      // Redirigir a la página deseada después de iniciar sesión
-      this.router.navigate(['pagina1']);
-    }
+    this.userService.login(loginData)
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['/pagina1']);
+      })
+      .catch(error => console.log(error));
   }
 
-  //Función para mostrar mensajes de error
-  mensaje_error(nombreclase: string, texto: string): void {
-    const elemento = document.querySelector(`.${nombreclase}`);
-    if (elemento instanceof HTMLElement) {
-      const mensajeElemento = elemento.querySelector('.mensajeError');
-      if (mensajeElemento) {
-        mensajeElemento.textContent = texto;
-      }
-    }
-  }
 }
+
+
+

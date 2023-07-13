@@ -3,14 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { Pagina1Component } from './components/pagina1/pagina1.component';
 import { RegistroComponent } from './components/registro/registro.component';
-import { AsistenciaComponent } from './components/asistencia/asistencia.component';
+import { EstadoComponent } from './components/estado/estado.component';
+import { EstudiantesComponent } from './components/estudiantes/estudiantes.component';
 
 const routes: Routes = [
   {path: '',component:LoginComponent},
   {path: 'login', component:LoginComponent},
   {path: 'pagina1', component:Pagina1Component},
   {path: 'registro', component:RegistroComponent},
-  {path:'asistencia', component:AsistenciaComponent}
+  {path:'estado', component:EstadoComponent},
+  {path:'estudiantes', component:EstudiantesComponent}
 ];
 
 @NgModule({

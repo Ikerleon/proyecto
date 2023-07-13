@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="regresar">
+  <p><a routerLink="/pagina1">Regresar</a></p>
+</div>
+<table>
+  <caption>Gestion de base de datos A</caption>
+  <thead>
+  <tr>
+    <th>N°</th>
+    <th>Cédula</th>
+    <th>Nombres de Estudiante</th>
+    <th>Asistencia</th>
+    <th>Inasistencia</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let estudiante of estudiantes">
+    <td>{{ estudiante.numero }}</td>
+    <td>{{ estudiante.cedula }}</td>
+    <td>{{ estudiante.nombres }}</td>
+    <td class="chequeo"><input type="checkbox" [(ngModel)]="estudiante.asistencia"></td>
+    <td class="chequeo"><input type="checkbox" [(ngModel)]="estudiante.inasistencia"></td>
+    <td class="boton">
+      <button (click)="justificarEstudiante()" >Justificar</button>
+    </td>
+    <td class="boton">
+      <button (click)="eliminarEstudiante(estudiante.numero)">Dar de baja</button>
+    </td>
+  </tr>
+</tbody>
+</table>
+<button type="button" class="agregar" id="abrirModal">Agregar</button>
+<button type="button" class="estado" routerLink="/estado">Estado de estudiantes</button>
+<div id="modal" class="modal-contenedor">
+  <div  class="modal-contenido">
+      <form (submit)="agregarEstudiante()">
+          <h1 class="titulo"> Agregar</h1>
+          <div class="datos">
+          <label>Cédula:</label>
+          <input type="text" [(ngModel)]="nuevoEstudiante.cedula" name="cedula" required><br>
+          </div>
+          <div class="datos">
+          <label>Nombres de Estudiante:</label>
+          <input type="text" [(ngModel)]="nuevoEstudiante.nombres" name="nombres" required><br>
+          </div>
+          <div class="botones">
+          <button id="close" type="button">Cerrrar</button>
+          <button type="submit" id="enviar">Agregar</button>
+          </div>
+      </form>
+  </div>
+</div>

@@ -1,21 +1,17 @@
-<body>
-<!--contenedor de iniciar sesion-->
+<body>   
     <div class="Inicar_sesion">
-        <!--formulario para iniciar sesion-->
-        <form action="" id="form">
-            <h1 class="titulo"> Iniciar sesion</h1>
-            <div class="datos correo">
-                <input type="email" id="correo">
-                <label for="correo">Correo institucional</label>
-                <p class="mensajeError"></p>
+        <form (submit)="onSubmit()">
+            <h2 class="titulo">Login de usuario</h2>
+            <div class="datos">
+                <input type="text" class="form-control" [(ngModel)]="email" name="email">
+                <label class="form-label">Email</label>
             </div>
-            <div class="datos contrasena">
-                <input type="password" id="contrasena">
-                <label for="contrasena">Contraseña</label>
-                <p class="mensajeError"></p>
+            <div class="datos">
+                <input type="password" class="form-control" [(ngModel)]="password" name="password">
+                <label class="form-label">Password</label>
             </div>
-            <button class="boton" type="button" (click)="validacionIniciarsesion()">Iniciar Sesión</button>
+            <button type="submit" class="boton">Iniciar sesion</button>
             <p>¿Aun no te has registrado? <a routerLink="/registro">Registrarse</a></p>
         </form>
     </div>
-</body>
+</body> 
